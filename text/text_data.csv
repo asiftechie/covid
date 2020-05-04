@@ -1,0 +1,2 @@
+﻿seq_id,patient_id,date,corona_test,age,gender,medical_history,smoker,patient_reported_symptoms,cough_filename,breathing_filename,finger_filename,patient_smartphone
+,,,positive,53,male,"None,",no,"Fever, chills, or sweating,Shortness of breath,New or worsening cough,Sore throat,Loss of taste,Loss of smell,",,,,
