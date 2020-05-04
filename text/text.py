@@ -43,7 +43,7 @@ def predict(csv, model_sav):
     model = textual_model()
     result = model.test_data(csv, model_sav)
     # returns only the positive probability of the first sample
-    return result[0][1]
+    return 100*result[0][1]
 
 def train(csv, save_model_name):
     """
@@ -104,8 +104,8 @@ class textual_model:
         df_clean["patient_reported_symptoms"].fillna("None,", inplace = True) 
         return df_clean
     
-    def load_test_csv(self, csv_path):
-        df = pd.read_csv(csv_path)
+    def load_test_csv(self, df):
+        # df = pd.read_csv(csv_path)
 
         df_clean = df.drop(columns=["seq_id", "patient_id", "date" , "cough_filename", "finger_filename",
                                         "patient_smartphone", "breathing_filename"])
